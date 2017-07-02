@@ -39,7 +39,7 @@ Usage of ./example:
 This code sample
 
 * Reads the command-line using the *GetCommandline()* method
-* This specifies a directory contianing JSON configuration files
+* This specifies a directory containing JSON configuration files
 * It then opens the JSON files, and then parses them uisng *ReadConfigs()*
 
 ```go
@@ -73,14 +73,14 @@ Go into the *example* subdirectory, build the executable, and run as follows:
 $ cd example
 $ go build
 ````
-Use the *config* directory to see how *Fan.json* and *Credentials.json* are combined for the Fan settings:
+Use the *config* directory to see how *Fan.json* and *Credentials.json* are combined to form the Fan settings:
 ```
 $ ./example -c ../config
 Reading 3 config files [credentials.json fan.json lamp.json]
 Device Fan: {Name:Fan Accessory:Insteon DeviceType:fanlinc DeviceID:A2 Host:192.168.0.10 OffValue:off OnValue:low Password:welcome1 Port:21000 Username:home1}
 Device Lamp: {Name:Lamp Accessory:Insteon DeviceType:lightBulb DeviceID:C12 Host:192.168.0.10 OffValue: OnValue: Password:welcome1 Port:21000 Username:home1}
 ```
-The reflect package is used to ensure parameters are consistent across multiple files.  Try the *config_err* directory to see this:
+The reflect package is used to ensure parameters are consistent across multiple files.  Specify the *config_err* directory to see this:
 ```
 $ ./example -c ../config_err
 Reading 2 config files [fan.json fan_err.json]
