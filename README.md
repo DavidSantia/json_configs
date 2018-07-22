@@ -160,7 +160,6 @@ multiple errors
    Distict: credentials.json
 ```
 
-
 ### Customizing
 The Device struct in the first sample program is just for example.
 You can specify any struct for whatever you want to configure in your application.
