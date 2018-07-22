@@ -39,7 +39,7 @@ For example, we are configuring a Fan device as shown below.
 Notice the first file has generic device information for a Fan, in a single JSON element.
 The second file contains an an array of two elements, configuring the network details for the Fan and another device.
 
-This package handles both formats (single elements and arrays) to provide flexibility for configuring settings.
+Both formats (single elements and arrays) are handled to provide flexibility for configuring settings.
 
 ### Example Code
 A sample program is provided in [example/main.go](https://github.com/DavidSantia/json_configs/blob/master/example/config_device.go)
@@ -118,7 +118,7 @@ No errors
 Device Fan: {Name:Fan Accessory:Insteon DeviceType:fanlinc DeviceID:A2 Host:192.168.0.10 OffValue:off OnValue:low Password:welcome1 Port:21000 Username:home1}
 Device Lamp: {Name:Lamp Accessory:Insteon DeviceType:lightBulb DeviceID:C12 Host:192.168.0.10 OffValue: OnValue: Password:welcome1 Port:21000 Username:home1}
 ```
-The reflect package is used to ensure settings are consistent across multiple files.  Specify the *config_err* directory to see this:
+Settings are also checked for consistency across multiple files.  Specify the *config_err* directory to see this:
 ```
 == Reading config files in ../config_err ==
 Config error: multiple errors
