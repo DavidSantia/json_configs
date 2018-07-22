@@ -1,6 +1,6 @@
 {
-  "Fan": {
-    "device_id": "A3",
-    "deviceType": "fanlinc"
-  }
+  "name": "Fan",
+  "device_id": "A3",
+  "deviceType": "fanlinc",
+  "onValue": "low"
 }

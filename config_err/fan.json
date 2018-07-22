@@ -1,13 +1,17 @@
-{
-  "Fan": {
+[
+  {
+    "name": "Fan",
     "accessory": "Insteon",
     "host": "192.168.0.10",
     "port": "21000",
-    "username": "home1",
-    "password": "welcome1",
     "device_id": "A2",
     "onValue": "low",
     "offValue": "off",
     "deviceType": "fanlinc"
+  },
+  {
+    "name": "Fan",
+    "username": "home1",
+    "password": "welcome1"
   }
-}
+]

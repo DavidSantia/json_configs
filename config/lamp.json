@@ -1,6 +1,5 @@
 {
-  "Lamp": {
-    "device_id": "C12",
-    "deviceType": "lightBulb"
-  }
+  "name": "Lamp",
+  "device_id": "C12",
+  "deviceType": "lightBulb"
 }
