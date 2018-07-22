@@ -42,7 +42,7 @@ The second file contains an an array of two elements, configuring the network de
 Both formats (single elements and arrays) are handled to provide flexibility for configuring settings.
 
 ### Example Code
-A sample program is provided in [example/main.go](https://github.com/DavidSantia/json_configs/blob/master/example/config_device.go)
+A sample program is provided in [example/config_device.go](https://github.com/DavidSantia/json_configs/blob/master/example/config_device.go)
 
 * Reads the command-line with *getCommandline()* to set the directory to read
 * It lists all *.json files in that directory
@@ -131,7 +131,7 @@ Device Fan: {Name:Fan Accessory:Insteon DeviceType:fanlinc DeviceID:A0 Host:192.
 ```
 
 ### Validating Filenames
-A second sample program [example/main.go](https://github.com/DavidSantia/json_configs/blob/master/example/distinct_files.go)
+A second sample program [example/distinct_files.go](https://github.com/DavidSantia/json_configs/blob/master/example/distinct_files.go)
 is provided to illustrate detailed error checking on a list of filenames.  It uses the function *DistinctFilenames* to
 make sure files are specified only once, are accesible, and are valid files.
 This function also constructs distinct filenames for messaging.  To see this, run the second example.
