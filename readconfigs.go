@@ -83,7 +83,9 @@ func ReadConfigFile(data interface{}, filename string) (err error) {
 	return
 }
 
-// Return a map[id] of structs ('data' is a pointer to that struct), read from directory of JSON config files
+// Read a list of config files into a map of structs, where 'data' points to struct and idName is field for map key
+// - Can configure application settings using one or more JSON files
+// - For example, put general settings in one file, credentials in a second file.
 func ReadConfigFiles(data interface{}, idName string, filenames ...string) (resultMap ResultMap, err error) {
 	var b []byte
 	var errList []string
