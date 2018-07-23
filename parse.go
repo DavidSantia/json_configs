@@ -18,7 +18,7 @@ func parseConfig(st reflect.Type, sv reflect.Value, parsedMap ParsedMap, errList
 	var f float64
 	var n int64
 	var i int
-	var ok bool
+	var ok, clear bool
 
 	// Map for json param names to tag names
 	param2tag := make(map[string]string)
@@ -30,6 +30,9 @@ func parseConfig(st reflect.Type, sv reflect.Value, parsedMap ParsedMap, errList
 		}
 	}
 
+	// If multiple results, we will have to clear 'data' object each iteration
+	clear = len(parsedMap) > 1
+	
 	resultMap = make(ResultMap)
 	for elementId, parsedArr = range parsedMap {
 
@@ -125,7 +128,9 @@ func parseConfig(st reflect.Type, sv reflect.Value, parsedMap ParsedMap, errList
 		resultMap[elementId] = sv.Interface()
 
 		// Clear data object for next element Id
-		clearConfig(st, sv, clearParamMap)
+		if clear {
+			clearConfig(st, sv, clearParamMap)
+		}
 	}
 	return
 }
