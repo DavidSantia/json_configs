@@ -153,8 +153,11 @@ func ReadConfigFiles(data interface{}, idName string, filenames ...string) (resu
 			}
 
 			// Find element Id by json tag or field name
-			v, _ = parsed.ElementMap[idTag]
-			if v == nil && tag {
+			v = nil
+			if tag {
+				v, _ = parsed.ElementMap[idTag]
+			}
+			if v == nil {
 				v, _ = parsed.ElementMap[idName]
 			}
 			if v == nil {
@@ -188,8 +191,11 @@ func ReadConfigFiles(data interface{}, idName string, filenames ...string) (resu
 				}
 
 				// Find element Id by json tag or field name
-				v, _ = parsed.ElementMap[idTag]
-				if v == nil && tag {
+				v = nil
+				if tag {
+					v, _ = parsed.ElementMap[idTag]
+				}
+				if v == nil {
 					v, _ = parsed.ElementMap[idName]
 				}
 				if v == nil {
