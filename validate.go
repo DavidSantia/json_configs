@@ -26,8 +26,8 @@ func validateParameters(st reflect.Type, parsedMap ParsedMap, errList *[]string)
 		if ok {
 			tag2param[tagName] = param.Name
 			param2tag[param.Name] = tagName
-			validparam[param.Name] = true
 		}
+		validparam[param.Name] = true
 	}
 
 	// Validate parameters for each element
